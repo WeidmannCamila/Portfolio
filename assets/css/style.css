@@ -42,10 +42,13 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 , p{
+h1, h2, h4, h5, h6 , p{
   font-family: 'Castoro', serif;
 }
 
+h3{
+  font-family: 'Cinzel Decorative';
+}
 
 
 
@@ -166,11 +169,15 @@ h1, h2, h3, h4, h5, h6 , p{
 
 
 
-@media (max-width: 992px) {
+@media (max-width: 1400px) {
+  #header h4, .Iam{
+    display: none;
+  }
   #header h1 {
     font-size: 36px;
+    align-items: flex-start;
   }
-  #header h2 {
+  #header h2, #header h3{
     font-size: 20px;
     line-height: 30px;
   }
@@ -178,10 +185,19 @@ h1, h2, h3, h4, h5, h6 , p{
     margin-top: 15px;
   }
   #header .container {
-    display: flex;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  #header .cover{
+    
     flex-direction: column;
     align-items: center;
   }
+  .flip-container .flip-inner-container, .flip-container2{
+    align-items: center;
+  }
+
 }
 
 /* Header Top */
@@ -214,7 +230,7 @@ background: var(--colorBlack);
  width: 70px;
 }
 
-#header.header-top h4,#header.header-top .social-links, #header.header-top h2, #header.header-top .navbar .nav-link div h3,  #header.header-top .flip-container,  #header.header-top .flip-container2{
+#header.header-top h4,#header.header-top .social-links, #header.header-top h3, #header.header-top .navbar .nav-link div h3,  #header.header-top .flip-container,  #header.header-top .flip-container2{
   display: none;
 }
 
@@ -254,6 +270,9 @@ background: var(--colorBlack);
   }
   #header.header-top h1 {
     font-size: 26px;
+  }
+  #header.header-top .cover{
+    height: 30px;
   }
 }
 
@@ -514,8 +533,78 @@ section .container {
   margin-right: 10px;
 }
 
+/* Sumary */
 
+.sumary-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(
+    to left,
+    #7b4b05 0,
+           #cb9b51 22%, 
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 78%,
+    #7b4b05 100%
+    );
+     color:transparent;
+    -webkit-background-clip: text;
+    
+    
+    }
 
+.sumary-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--colorRed);
+  position: relative;
+}
+
+.sumary-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Castoro', serif;
+  color: var(--colorRed);
+  margin-bottom: 10px;
+}
+
+.sumary-item h5 {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sumary-item ul {
+  padding-left: 20px;
+}
+
+.sumary-item ul li {
+  padding-bottom: 10px;
+}
+
+.sumary-item:last-child {
+  padding-bottom: 0;
+}
+
+.sumary-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: var(--colorRed);
+  border: 2px solid var(--colorRed);
+}
 
 
 
@@ -658,10 +747,10 @@ width:100px;
 
 
 .flip-back .profile-image img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 4px solid #ffffff;
+  
+  height:50px;
+  border-radius: 10%;
+ 
   margin-top: 20px;
 }
 
@@ -677,24 +766,11 @@ width:100px;
   margin: 20px 20px;
 }
 
-.flip-back h2 {
-  display: block;
-  
-  color: #fff;
-  text-align: left;
-  margin: 7px;
-  line-height: 38px;
- 
-  transform: all 0.6s;
+
+.flip-back h3{
+  color: var(--colorRed);
 }
 
-
-.flip-back h2 {
-  font-size: 20px;
-  transition: ease-in-out 0.3s;
-  margin-top: 10px;
-  color: rgba(255, 255, 255, 0.8);
-}
 
 .flip-back span{
   transition: ease-in-out 0.5s;
@@ -708,10 +784,19 @@ width:100px;
     #cb9b51 78%,
     #704103 100%
     );
-     color:transparent;
-     -webkit-background-clip:text;;
+  color:transparent;
+  -webkit-background-clip:text;;
   border-bottom: 2px solid var(--colorRed);
-  padding: 2px;
+  display:grid;
+   font-size: 20px;
+ 
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 30px;
+ 
+  line-height: 38px;
+ 
+  transform: all 0.6s;
   
 
 }
@@ -719,10 +804,11 @@ width:100px;
 
 .flip-back span:hover {
   color: #000000;
-  margin-bottom: 2px;
+  
   border-bottom: 2px solid #ffffff;
 
 }
+
 
 
 

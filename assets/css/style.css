@@ -1017,9 +1017,9 @@ border-radius: 10px;
 
 .contact .info-box {
   
-  padding: 10px;
+  padding: 5px;
   width: 100%;
-
+  border-bottom: 2px solid  #9b0909;
   background: linear-gradient(
 	to left,
 	#573304 0,
@@ -1057,8 +1057,9 @@ border-radius: 10px;
 }
 
 .contact .text-center .jokerbutton{
-  padding: 10px 30px;
+  padding: 10px 10px;
   z-index: 1;
+  height: 100px;
 }
 
 .contact i {
